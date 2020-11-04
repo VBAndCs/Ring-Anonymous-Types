@@ -87,3 +87,19 @@ x = defobj([:b = 1])
 y = defobj([:a = x])
 ```
 
+# Hope:
+I hope ring can someday provide a direct syntax to declare anonymous types, such as:
+```ring
+Colors = { 
+      Red = {R = 255 G = 0 B = 0}
+      Green = {R = 0 G = 255 B = 0}
+      Blue = {R = 0 G = 0 B = 255}
+      Black = {R = 0 G = 0 B = 0}
+      White = {R = 255 G = 255 B = 255}
+      func Print() {
+          For C in Attributes(self)
+             ? C + " = " + GetAttribute(Self, C).ToString()
+          Next
+      }
+    } 
+```
