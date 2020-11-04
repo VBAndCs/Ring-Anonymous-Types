@@ -8,7 +8,7 @@ func defObj(lstAttrs)
     eval(_class)
 	 for attr in lstAttrs
       if isList(attr)   
-        if isstring(attr[2]) and substr(attr[2], "_ring_anonymous_func_") = 1
+        if isstring(attr[2]) and isFunction(attr[2])
            AddMethod(o, attr[1], attr[2])
         else
 		     AddAttribute(o, attr[1])
