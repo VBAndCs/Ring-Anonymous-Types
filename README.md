@@ -90,7 +90,6 @@ y = defobj([:a = x])
 # Hope:
 I hope ring can someday provide a direct syntax to declare anonymous types, such as:
 ```ring
-```ring
 Color = {
    R 
    G 
@@ -99,7 +98,6 @@ Color = {
 		return "(" + R + ", " + G + ", " + B + ")"
    }
 }
-```
 
 Colors = { 
       Red = new Color{R = 255 G = 0 B = 0}
