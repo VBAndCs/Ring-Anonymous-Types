@@ -71,20 +71,25 @@ You can print all the colors info like this:
 ? colors.Print()
 ```
 
-# Warining:
-You can't nest `defObj` directly, because there is a bug in Ring regarding calling methods with list param inside another listt. This will not work:
+# Nested Objects:
+
+Example:
+
 ```ring
 y = defobj([
    :a = defobj([
       :b = 1
    ])
 ])
+? y.a.b
 ```
 
-But this will work:
+Example:
+
 ```ring
 x = defobj([:b = 1])
 y = defobj([:a = x])
+? y.a.b
 ```
 
 # Hope:
